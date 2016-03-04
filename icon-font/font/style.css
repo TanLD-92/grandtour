@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?z9qfu0');
+    src:    url('fonts/icomoon.eot?z9qfu0#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?z9qfu0') format('truetype'),
+        url('fonts/icomoon.woff?z9qfu0') format('woff'),
+        url('fonts/icomoon.svg?z9qfu0#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="grandicons-"], [class*=" grandicons-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.grandicons-close-cicle:before {
+    content: "\e90b";
+}
+.grandicons-cup:before {
+    content: "\e90c";
+}
+.grandicons-dish:before {
+    content: "\e90d";
+}
+.grandicons-full-screen:before {
+    content: "\e90e";
+}
+.grandicons-next-arrow:before {
+    content: "\e90f";
+}
+.grandicons-oclock:before {
+    content: "\e910";
+}
+.grandicons-phone-line:before {
+    content: "\e911";
+}
+.grandicons-prev-arrow:before {
+    content: "\e912";
+}
+.grandicons-toque:before {
+    content: "\e913";
+}
+.grandicons-market:before {
+    content: "\e90a";
+}
+.grandicons-calendar:before {
+    content: "\e909";
+}
+.grandicons-unsound:before {
+    content: "\e908";
+}
+.grandicons-envelope:before {
+    content: "\e900";
+}
+.grandicons-facebook:before {
+    content: "\e901";
+}
+.grandicons-google-plug:before {
+    content: "\e902";
+}
+.grandicons-phone:before {
+    content: "\e903";
+}
+.grandicons-reservation:before {
+    content: "\e904";
+}
+.grandicons-search:before {
+    content: "\e905";
+}
+.grandicons-sound:before {
+    content: "\e906";
+}
+.grandicons-twitter:before {
+    content: "\e907";
+}
+

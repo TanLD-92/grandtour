@@ -1,0 +1,317 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Mixins
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// scale
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+}
+
+// ----------------------------------------------------------------------
+// Horizontal align block
+// ----------------------------------------------------------------------
+// example: @include horizontal-align();
+
+@mixin horizontal-align {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	margin: auto;
+}
+// ----------------------------------------------------------------------
+// Vertical align block
+// ----------------------------------------------------------------------
+// example: @include vertical-align();
+
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin: auto;
+}
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+// Sizing shortcuts
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+// Set the size of something that has equal width and height
+@mixin square($size) {
+	@include size($size, $size);
+}
+
+// For 1px border
+@mixin border($color: $border-color) {
+	border: 1px solid $color;
+}
+@mixin border-none() {
+	border: 0 none transparent;
+}
+
+@mixin box-shadow-none() {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+@mixin box-shadow($shadow) {
+-webkit-box-shadow: $shadow;
+-moz-box-shadow: $shadow;
+box-shadow: $shadow;
+}
+
+@mixin rotate( $val: -2deg ) {
+  -webkit-transform: rotate($val);
+  -moz-transform: rotate($val);
+  -ms-transform: rotate($val);
+  -o-transform: rotate($val);
+  transform: rotate($val);
+}
+
+@mixin transform($val) {
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+  transform: $val;
+}
+
+@mixin transform-origin($val) {
+  -webkit-transform-origin: $val;
+  -moz-transform-origin: $val;
+  -ms-transform-origin: $val;
+  transform-origin: $val;
+}
+
+@mixin transform-style($val) {
+  -webkit-transform-style: $val;
+  -moz-transform-style: $val;
+  -ms-transform-style: $val;
+  transform-style: $val;
+}
+
+@mixin perspective($val) {
+  -webkit-perspective: $val; 
+  -moz-perspective: $val; 
+  -ms-perspective: $val; 
+  perspective: $val;
+}
+
+@mixin perspective-origin($val){
+  -webkit-perspective-origin: $val;
+  -moz-perspective-origin: $val;
+  -ms-perspective-origin: $val;
+  perspective-origin: $val;
+}
+
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+	// Firefox 4-18
+	&:-moz-placeholder { color: $color; }
+	// Firefox 19+ (See https://github.com/twbs/bootstrap/pull/11526)
+	&::-moz-placeholder { color: $color; }
+	// Internet Explorer 10+
+	&:-ms-input-placeholder { color: $color; }
+	// Safari and Chrome
+	&::-webkit-input-placeholder { color: $color; }
+	// Fallback
+	&.placeholder { color: $color; }
+}
+
+// Centering
+@mixin centering($scope) {
+	& {
+		position: absolute;
+	}
+
+	@if $scope == "vertical" {
+		& {
+			top: 50%;
+			@include transform(translateY(-50%));
+		}
+	}
+
+	@if $scope == "horizontal" {
+		& {
+			left: 50%;
+			@include transform(translateX(-50%));
+		}
+	}
+
+	@if $scope == "horizontal-and-vertical" {
+		& {
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%));
+		}
+	}
+}
+
+// For better font-rendering on OS X
+@mixin font-smoothing($value) {
+	@if $value == "on" {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	@if $value == "off" {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
+}
+
+// Generating arrow-like triangles
+@mixin triangle($size, $color, $position) {
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		width: 0;
+		height: 0;
+		pointer-events: none;
+	}
+
+	@if $position == "top" {
+		&:after {
+			bottom: 100%;
+			left: 50%;
+			margin-left: (-$size);
+			border-right: $size solid rgba(255, 255, 255, 0);
+			border-bottom: $size solid $color;
+			border-left: $size solid rgba(255, 255, 255, 0);
+		}
+
+		.ie8 &:after {
+			border-right-color: transparent;
+			border-left-color: transparent;
+		}
+	}
+
+	@if $position == "right" {
+		&:after {
+			top: 50%;
+			left: 100%;
+			margin-top: (-$size);
+			border-top: $size solid rgba(255, 255, 255, 0);
+			border-bottom: $size solid rgba(255, 255, 255, 0);
+			border-left: $size solid $color;
+		}
+
+		.ie8 &:after {
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+		}
+	}
+
+	@if $position == "bottom" {
+		&:after {
+			top: 100%;
+			left: 50%;
+			margin-left: (-$size);
+			border-top: $size solid $color;
+			border-right: $size solid rgba(255, 255, 255, 0);
+			border-left: $size solid rgba(255, 255, 255, 0);
+		}
+
+		.ie8 &:after {
+			border-right-color: transparent;
+			border-left-color: transparent;
+		}
+	}
+
+	@if $position == "left" {
+		&:after {
+			top: 50%;
+			right: 100%;
+			margin-top: (-$size);
+			border-top: $size solid rgba(255, 255, 255, 0);
+			border-right: $size solid $color;
+			border-bottom: $size solid rgba(255, 255, 255, 0);
+		}
+
+		.ie8 &:after {
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+		}
+	}
+}
+
+// ----------------------------------------------------------------------
+
+  // Media Query Breakpoints
+
+// ----------------------------------------------------------------------
+
+// example @include breakpoint(940) { width:80%; }
+
+@mixin breakpoint($size) {
+  @media only screen and (max-width: $size + px) { @content; }
+}
+
+@mixin breakpoint-height($size) {
+  @media only screen and (max-height: $size + px) { @content; }
+}
+
+// ----------------------------------------------------------------------
+
+  // Media Query Breakpoints
+
+// ----------------------------------------------------------------------
+
+// example @include min-breakpoint(940) { width:80%; }
+
+@mixin min-breakpoint($size) {
+  @media only screen and (min-width: $size + px) { @content; }
+}

@@ -1,0 +1,147 @@
+/******************** responsive ******************/
+
+	/******************* responsive for height ***************************/
+		@include breakpoint-height(780) {
+			.nav-menu {
+				font-size: 14px;
+				.item-menu, .item-submenu {
+					padding-bottom: 6px;
+					padding-top: 6px;
+				}
+			}
+			.logo-title {
+				height: 90px;
+				width: 122px;
+			}
+			.aside-content-top {
+				padding-bottom: 190px;
+				.nav-menu-footer {
+					height: 220px;
+					.item-list {
+						padding-bottom: 14px;
+						padding-top: 14px;
+					}
+				}
+				.main-title {
+					margin-bottom: 15px;
+				}
+			}
+			.left-aside-content {
+				padding-top: 15px;
+				padding-bottom: 15px; 
+			}
+			.header-container .booking-header-content {
+				height: 100%;
+			}
+		}
+		@include breakpoint-height(580) {
+			.nav-mobile-ct .contact-list {
+				.item-list {
+					padding-bottom: 15px;
+					padding-top: 15px;
+				}
+			}
+
+		}
+	/******************* responsive for height .end **********************/
+
+	@media screen and (max-width: 1120px){
+		.left-aside-content {
+			display: none;
+		}
+		.main-container-full ,.header-container, .header-container .search-header-content {
+			padding-left: 0;
+		}
+		.logo-title {
+			background-image: url("../images/logo-res.jpg");
+			height: 111px;
+			width: 122px;
+		}
+		.header-container {
+			background-color: $color-white;
+			@include box-shadow(4px 2px 4px rgba(0, 0, 0, 0.29));
+
+			.mobile-hide {
+				display: none;
+			}
+			.btn-booking-hd {
+				background-color: transparent;
+				color: $color-brown-light;
+				.left-icon {
+					margin-right: 0;
+				}
+			}
+			.main-title-mobile {
+				display: inline-block;
+			}
+			.nav-mobile-ct {
+				.nav-menu {
+					margin-bottom: 6px;
+				}
+			}
+			.navbar-header-mobile {
+				display:block;
+			}
+			.booking-header-content {
+				top: 0;
+				padding-top: 46px;
+				width: 100%;
+				.booking-top-mobile {
+					display: block;
+				}
+			}
+			.list-social .icon-link {
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+			.search-header-form {
+				border-bottom: 1px solid $color-border-form;
+				border-top: 1px solid $color-border-form;
+				.form-control {
+					color: $color-black;
+					font-size: 15px;
+					font-weight: $font-normal;
+					height: 44px;
+					padding: 12px 50px 12px 20px;
+				}
+				.form-gr-mobile {
+					position: relative;
+					.btn-search {
+						font-size: 15px;
+						color: $color-brown-light;
+						position: absolute;
+						right: 0;
+						top: 0;
+						height: 46px;
+						width: 50px;
+						text-align: center;
+						&:hover, &:focus {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+		.thumb-category .thumb-content {
+			.title-wbu60 {
+				font-size: 44px;
+				line-height: 44px;
+			}
+		}
+		.main-container-full {
+			height: auto;
+			padding-bottom: 0;
+
+			padding-left: 0; 
+			position: relative;
+			.category-sevice-fullpage {
+				padding-left: 0;
+				position: relative;
+			}
+		}
+	}
+	@media screen and (max-width: 1000px){
+		.thumb-category .thumb-content {
+			padding: 10px 15px;
+		}
+	}
