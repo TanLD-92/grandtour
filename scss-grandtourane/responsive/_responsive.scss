@@ -28,7 +28,7 @@
 			}
 			.left-aside-content {
 				padding-top: 15px;
-				padding-bottom: 15px; 
+				padding-bottom: 15px;
 			}
 			.header-container .booking-header-content {
 				height: 100%;
@@ -132,12 +132,20 @@
 			height: auto;
 			padding-bottom: 0;
 
-			padding-left: 0; 
+			padding-left: 0;
 			position: relative;
 			.category-sevice-fullpage {
 				padding-left: 0;
 				position: relative;
 			}
+		}
+		.main-container-partial {
+			padding: 0;
+			height: auto;
+			padding-top: 47px;
+		}
+		.txt-45 {
+			@include rem('font-size', 35);
 		}
 	}
 	@media screen and (max-width: 1000px){

@@ -1,0 +1,34 @@
+.b-content-list-item {
+  .list-item-contet {
+    margin: 0;
+    list-style-type: none;
+    li {
+      padding: 0;
+      .item-link-detail {
+        display: block;
+        .img-detail {
+          width: 100%;
+          height: auto;
+        }
+        .des-content {
+          padding: 35px 15px;
+          text-align: center;
+        }
+        .title {
+          color: $color-title-dark;
+        }
+        .desc {
+          color: $color-desc-item;
+        }
+        .link-button {
+          display: block;
+          cursor: pointer;
+        }
+        .grandicons-next-arrow {
+          @include  rem('font-size', 28);
+          color: $color-grey-link-2;
+        }
+      }
+    }
+  }
+}

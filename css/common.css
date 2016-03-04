@@ -677,6 +677,31 @@ a.txt-lk-green {
       padding: 14px 0 2px; }
 
 /****************** form .end *************/
+.b-content-list-item .list-item-contet {
+  margin: 0;
+  list-style-type: none; }
+  .b-content-list-item .list-item-contet li {
+    padding: 0; }
+    .b-content-list-item .list-item-contet li .item-link-detail {
+      display: block; }
+      .b-content-list-item .list-item-contet li .item-link-detail .img-detail {
+        width: 100%;
+        height: auto; }
+      .b-content-list-item .list-item-contet li .item-link-detail .des-content {
+        padding: 35px 15px;
+        text-align: center; }
+      .b-content-list-item .list-item-contet li .item-link-detail .title {
+        color: #6b6768; }
+      .b-content-list-item .list-item-contet li .item-link-detail .desc {
+        color: #9b9b9b; }
+      .b-content-list-item .list-item-contet li .item-link-detail .link-button {
+        display: block;
+        cursor: pointer; }
+      .b-content-list-item .list-item-contet li .item-link-detail .grandicons-next-arrow {
+        font-size: 28px;
+        font-size: 1.75rem;
+        color: #c6c6c6; }
+
 /****************** header comtainer *********************/
 /* ====================== lines button nav rwd==================================================*/
 .lines {
@@ -1092,6 +1117,26 @@ a.txt-lk-green {
 /************** nav left ******************/
 /*********************************** footer container **********************/
 /********************************* footer container .end **********************/
+.txt-45 {
+  font-size: 45px;
+  font-size: 2.8125rem; }
+
+.txt-14 {
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.mb20 {
+  margin-bottom: 20px; }
+
+.mb25 {
+  margin-bottom: 25px; }
+
+.mb98 {
+  margin-bottom: 98px; }
+
 .wrapper-container {
   min-height: 100%;
   position: relative; }
@@ -1126,6 +1171,9 @@ a.txt-lk-green {
   padding-left: 303px;
   position: relative;
   height: 100%; }
+
+.left-aside-content .aside-content-top .nav-menu-footer-md {
+  position: static; }
 
 /**************** banner .end *************/
 /************** list category *********************/
@@ -1304,7 +1352,14 @@ a.txt-lk-green {
     position: relative; }
     .main-container-full .category-sevice-fullpage {
       padding-left: 0;
-      position: relative; } }
+      position: relative; }
+  .main-container-partial {
+    padding: 0;
+    height: auto;
+    padding-top: 47px; }
+  .txt-45 {
+    font-size: 35px;
+    font-size: 2.1875rem; } }
 
 @media screen and (max-width: 1000px) {
   .thumb-category .thumb-content {
