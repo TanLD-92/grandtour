@@ -4,6 +4,33 @@
 .txt-14 {
   @include rem('font-size', 14);
 }
+.txt-12 {
+  @include rem('font-size', 12);
+}
+.txt-117 {
+  @include rem('font-size', 17);
+}
+.t100 {
+  @include rem('font-weight', 100);
+}
+.t200 {
+  @include rem('font-weight', 200);
+}
+.t300 {
+  @include rem('font-weight', 300);
+}
+.t400 {
+  @include rem('font-weight', 400);
+}
+.t500 {
+  @include rem('font-weight', 500);
+}
+.t600 {
+  @include rem('font-weight', 600);
+}
+.t700 {
+  @include rem('font-weight', 600);
+}
 .mt20 {
   margin-top: 20px;
 }
@@ -15,4 +42,7 @@
 }
 .mb98 {
   margin-bottom: 98px;
+}
+.mb45 {
+  margin-bottom: 45px;
 }

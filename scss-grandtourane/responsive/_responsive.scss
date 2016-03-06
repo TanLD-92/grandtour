@@ -43,6 +43,12 @@
 			}
 
 		}
+	/******************* responsive for weight mobile ********************/
+	@media screen and (max-width: 414px){
+		.info-detail-content {
+			padding: 33px 15px !important;
+		}
+	}
 	/******************* responsive for height .end **********************/
 
 	@media screen and (max-width: 1120px){
@@ -138,6 +144,9 @@
 				padding-left: 0;
 				position: relative;
 			}
+		}
+		.info-detail-content {
+			padding: 66px 150px;
 		}
 		.main-container-partial {
 			padding: 0;

@@ -1,3 +1,21 @@
+.img-detail-banner {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+.info-detail-content {
+  padding: 66px 300px;
+  text-align: center;
+  .title {
+    @include rem('font-size', 34);
+    color: $color-title-detail;
+  }
+  .info-detail {
+    @include rem('font-size', 12);
+    text-align: justify;
+    color: $color-desc-detail;
+  }
+}
 .b-content-list-item {
   .list-item-contet {
     margin: 0;
@@ -6,7 +24,17 @@
       padding: 0;
       .item-link-detail {
         display: block;
+        .img-link-content {
+          display: block;
+          overflow: hidden;
+          &:hover {
+            .img-detail {
+              @include scale(1.1);
+            }
+          }
+        }
         .img-detail {
+          @include transition (all .8s ease-in-out);
           width: 100%;
           height: auto;
         }
@@ -20,6 +48,7 @@
         .desc {
           color: $color-desc-item;
         }
+
         .link-button {
           display: block;
           cursor: pointer;
